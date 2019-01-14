@@ -1,0 +1,82 @@
+numpy
+
+scipy库
+
+1.numpy：用于科学计算（大型矩阵） 基础库
+2.SciPy：在numpy基础上增加了更丰富的数学计算方法
+3.pandas：基于numPy 的一种工具，为了解决数据分析任务而创建的.Pandas 
+			纳入了大量库和一些标准的数据模型
+4.matplotlib：用于数据可视化
+
+引入方式
+import numpy as np
+
+
+核心数据结构
+ndarray：
+	一种由相同类型的元素组成的多维数组，元素数量是事先给定好的
+	元素的数据类型由dtype(data-type)对象来指定，每个ndarray只有一种dtype类型
+	ndarray的大小固定，创建好数组后数组大小是不会再发生改变的
+
+
+创建ndarry
+	array
+	ones
+	zeros
+	empty
+	
+	arange: 类似python的range函数，通过指定开始值、
+	终值和步长来创建一个一维数组，注意：最终创建的数组不包含终值
+	
+	linspace函数：通过指定开始值、终值和元素个数来创建一个
+	一维数组，数组的数据元素符合等差数列，可以通过endpoint
+	关键字指定是否包含终值，默认包含终值
+	
+	logspace:
+	
+	random
+		random:
+		rand:
+		randn:
+		randint:
+		
+		
+		
+
+ndarray对象的属性
+	ndim:返回数的轴数（维度），秩
+	shape:
+	dtype:
+	size:
+	itemsize:
+	
+	
+修改形状
+	shape:
+	reshape:
+	降维操作
+	
+数组与标量，数组之间的运算
+	矢量化运算
+	元素级操作
+	
+数组的矩阵积
+	np.dot:满足一个数组的行，余一个数组的列数相等，可进行行列相乘
+	
+
+数组的索引
+	切片操作：
+	花式索引：
+	布尔索引：
+	
+	
+数组的转置余轴兑换
+	arr.T
+	arr.transpose(0,1,2)
+	
+	
+数组的拉伸与合并
+	tile：拉伸数组
+	stack：合并数组
+	vstack：横向合并
+	hstack：纵向合并    
