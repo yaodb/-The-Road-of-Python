@@ -1,1 +1,58 @@
 
+import time
+
+
+
+# 1. time.loctime
+
+# 返回当地时间的时间元组，接收时间戳，返回时间元组
+
+print(time.localtime())
+
+
+
+#2. time.mktime
+
+# 接收时间元组返回时间戳
+
+a=time.localtime()
+
+print(time.mktime(a))
+
+
+
+# 3.time.strftime 接收时间元组，返回可读形式的时间格式
+
+print(time.strftime('%Y/%m/%d %H:%M:%S %A',a))
+
+
+
+# 4.time.strptime 接收可读形式的时间格式，返回时间元组
+
+print(time.strptime('2019/01/12 22:01:38 Saturday','%Y/%m/%d %H:%M:%S %A'))
+
+
+
+# 5. time.time 当前时间戳
+
+t=time.time()
+
+print(t)
+
+
+
+#  时间戳转化为时间格式
+
+time_tup=time.localtime(t)
+
+b=time.strftime('%Y/%m/%d %H:%M:%S %A',time_tup)
+
+print(b)
+
+#  时间格式转化为时间戳
+
+c=time.strptime('2019/01/12 22:15:49 Saturday','%Y/%m/%d %H:%M:%S %A')
+
+c=time.mktime(c)
+
+print(c)
